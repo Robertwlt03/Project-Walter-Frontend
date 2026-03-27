@@ -1,6 +1,6 @@
 # Project Walter (Frontend)
 
-Willkommen bei Project Walter! Dies ist mein persönliches Lernprojekt, an dem ich in meiner Freizeit arbeite. Als
+Willkommen bei **Project Walter**! Dies ist mein persönliches Lernprojekt, an dem ich in meiner Freizeit arbeite. Als
 Einzelentwickler nutze ich dieses Projekt, um meine Fähigkeiten in der modernen Webentwicklung auszubauen und neue
 Technologien in der Praxis auszuprobieren.
 
@@ -24,9 +24,9 @@ Technologien in der Praxis auszuprobieren.
 
 Kleine Helfer, die mir beim Programmieren unter die Arme greifen:
 
-+ ESLint 9: Erkennt Fehler direkt beim Schreiben.
-+ Prettier: Formatiert den Code automatisch beim Speichern.
-+ TypeScript: Sichert die Datenstrukturen ab und verhindert Bugs.
+* **ESLint 9**: Erkennt Fehler direkt beim Schreiben.
+* **Prettier**: Formatiert den Code automatisch beim Speichern.
+* **TypeScript**: Sichert die Datenstrukturen ab und verhindert Bugs.
 
 ## Installation
 
