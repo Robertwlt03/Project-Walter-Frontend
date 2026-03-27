@@ -1,73 +1,39 @@
-# React + TypeScript + Vite
+# Project Walter (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Willkommen bei Project Walter! Dies ist mein persönliches Lernprojekt, an dem ich in meiner Freizeit arbeite. Als
+Einzelentwickler nutze ich dieses Projekt, um meine Fähigkeiten in der modernen Webentwicklung auszubauen und neue
+Technologien in der Praxis auszuprobieren.
 
-Currently, two official plugins are available:
+![Build](https://img.shields.io/github/actions/workflow/status/Robertwlt03/Project-Walter-Frontend/pipeline.yml?color=31C854&label=build)
+![Updated](https://img.shields.io/github/last-commit/Robertwlt03/Project-Walter-Frontend?color=646CFF&label=updated)
+![License](https://img.shields.io/github/license/Robertwlt03/Project-Walter-Frontend?&color=informational&label=license)
+![Issues](https://img.shields.io/github/issues/Robertwlt03/Project-Walter-Frontend?color=orange&label=issues)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+| Technologie                                                                                                                       | Kategorie  |
+|:----------------------------------------------------------------------------------------------------------------------------------|:----------:|
+| <a href="https://react.dev/"><img alt="React" src="https://skillicons.dev/icons?i=react" width="50"/></a> **v. 19**               | Framework  |
+| <a href="https://vite.dev/"><img alt="Vite" src="https://skillicons.dev/icons?i=vite" width="50"/></a> **v. 8**                   | Build Tool |
+| <a href="https://tailwindcss.com/"><img alt="Tailwind" src="https://skillicons.dev/icons?i=tailwind" width="50"/></a> **v. 4**    |  Styling   |
+| <a href="https://gsap.com/"><img alt="GSAP" src="./public/gsap.svg" width="50"/></a> **v. 3**                                     | Animations |
+| <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://skillicons.dev/icons?i=ts" width="50"/></a> **v. 5** |  Language  |
+| <a href="https://haptics.lochie.me/"><img alt="WebHaptics" src="./public/webHaptics.svg" width="100"/></a> **v. 0.0.6**           |  Feedback  |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Entwicklung & Qualitätssicherung
 
-## Expanding the ESLint configuration
+Kleine Helfer, die mir beim Programmieren unter die Arme greifen:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
++ ESLint 9: Erkennt Fehler direkt beim Schreiben.
++ Prettier: Formatiert den Code automatisch beim Speichern.
++ TypeScript: Sichert die Datenstrukturen ab und verhindert Bugs.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Installiert alle Abhängigkeiten
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Startet die lokale Entwicklungsumgebung
+npm run dev
 ```
