@@ -16,6 +16,7 @@ Technologien in der Praxis auszuprobieren.
 | <a href="https://react.dev/"><img alt="React" src="https://skillicons.dev/icons?i=react" width="50"/></a> **v. 19**               | Framework  |
 | <a href="https://vite.dev/"><img alt="Vite" src="https://skillicons.dev/icons?i=vite" width="50"/></a> **v. 8**                   | Build Tool |
 | <a href="https://tailwindcss.com/"><img alt="Tailwind" src="https://skillicons.dev/icons?i=tailwind" width="50"/></a> **v. 4**    |  Styling   |
+| <a href="https://vitest.dev/"><img alt="Vitest" src="https://skillicons.dev/icons?i=vitest" width="50"/></a> **v. 4**             |  Testing   |
 | <a href="https://gsap.com/"><img alt="GSAP" src="./public/gsap.svg" width="50"/></a> **v. 3**                                     | Animations |
 | <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://skillicons.dev/icons?i=ts" width="50"/></a> **v. 5** |  Language  |
 | <a href="https://haptics.lochie.me/"><img alt="WebHaptics" src="./public/webHaptics.svg" width="100"/></a> **v. 0.0.6**           |  Feedback  |
@@ -24,9 +25,11 @@ Technologien in der Praxis auszuprobieren.
 
 Kleine Helfer, die mir beim Programmieren unter die Arme greifen:
 
-* **ESLint 9**: Erkennt Fehler direkt beim Schreiben.
-* **Prettier**: Formatiert den Code automatisch beim Speichern.
-* **TypeScript**: Sichert die Datenstrukturen ab und verhindert Bugs.
+* **Vitest**: Ein blitzschnelles Test-Framework, das nativ mit Vite zusammenarbeitet.
+* **React Testing Library**: Ermöglicht es mir, Komponenten so zu testen, wie ein echter Nutzer sie bedienen würde.
+* **jsdom**: Simuliert eine Browser-Umgebung im Terminal für schnelle Testläufe.
+* **ESLint 9 & Prettier**: Sorgen für sauberen Code und verhindern Flüchtigkeitsfehler.
+* **TypeScript**: Sichert die Datenstrukturen ab und bietet erstklassige Autovervollständigung in der IDE.
 
 ## Installation
 
