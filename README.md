@@ -31,6 +31,37 @@ Kleine Helfer, die mir beim Programmieren unter die Arme greifen:
 * **ESLint 9 & Prettier**: Sorgen für sauberen Code und verhindern Flüchtigkeitsfehler.
 * **TypeScript**: Sichert die Datenstrukturen ab und bietet erstklassige Autovervollständigung in der IDE.
 
+## Projektstruktur – wo finde ich was?
+
+| Pfad                                                       | Inhalt                                                                                                                                                      |
+|:-----------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `index.html`                                               | HTML-Einstieg; bindet `src/main.tsx` ein und setzt Titel sowie Favicon (`/favicon.svg`).                                                                    |
+| `src/main.tsx`                                             | React-Einstieg: rendert `<App />` in `#root`, importiert globale Styles.                                                                                    |
+| `src/App.tsx`                                              | Hauptkomponente der Anwendung.                                                                                                                              |
+| `src/App.css`                                              | Styles, die nur zur App-Komponente gehören.                                                                                                                 |
+| `src/index.css`                                            | Globale Styles: Tailwind (`@import 'tailwindcss'`), CSS-Variablen (Farben, Typo), Basis-Layout.                                                             |
+| `src/App.test.tsx`                                         | Beispiel-Test mit Vitest und React Testing Library.                                                                                                         |
+| `public/`                                                  | Statische Dateien, die unverändert ausgeliefert werden (z. B. `favicon.svg`, Badges/Icons wie `gsap.svg`, `webHaptics.svg`). Unter `/dateiname` erreichbar. |
+| `vite.config.ts`                                           | Vite-Konfiguration: React- und Tailwind-Plugin, **Vitest** (`environment: jsdom`, `setupFiles: vitest.setup.ts`).                                           |
+| `vitest.setup.ts`                                          | Test-Setup (z. B. `@testing-library/jest-dom`).                                                                                                             |
+| `eslint.config.js`                                         | ESLint-Regeln (Flat Config, ESLint 9).                                                                                                                      |
+| `tsconfig.json`, `tsconfig.app.json`, `tsconfig.node.json` | TypeScript-Projektaufteilung (App vs. Build-Tools wie Vite).                                                                                                |
+| `.github/workflows/pipeline.yml`                           | GitHub Actions: bei Push/PR auf `main` werden `npm install`, `npm run lint` und `npm run build` ausgeführt.                                                 |
+
+Neue UI-Logik gehört typischerweise unter `src/` (Komponenten, Hooks, Hilfsfunktionen). Gemeinsame Tests liegen neben
+der getesteten Datei oder in einem späteren `src/**/__tests__`-Muster – aktuell liegt ein Beispieltest bei
+`App.test.tsx`.
+
+## NPM-Skripte
+
+| Befehl            | Zweck                                                           |
+|:------------------|:----------------------------------------------------------------|
+| `npm run dev`     | Entwicklungsserver (Vite) mit Hot Reload.                       |
+| `npm run build`   | TypeScript-Check (`tsc -b`) und Produktions-Build nach `dist/`. |
+| `npm run preview` | Lokaler Preview-Server für den Build unter `dist/`.             |
+| `npm run lint`    | ESLint über das gesamte Projekt.                                |
+| `npm run test`    | Vitest (Watch-Modus; einmalig z. B. `npx vitest run`).          |
+
 ## Installation
 
 ```bash
